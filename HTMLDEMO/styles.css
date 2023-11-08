@@ -1,0 +1,160 @@
+* {
+
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: #0f172a;
+    color: #bdc1c6;
+    padding: 14px;
+    min-height: 100vh; /*vh - view height */
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+}
+
+header {
+    display: flex;
+    align-items: center; /* aligns in vertical lane */
+    justify-content: space-between; /* aligns in horizontal lane */
+    padding: 14px;
+}
+
+header section img {
+    max-width: 48px;
+    border-radius: 50%; /* makes it round */
+    border: 2px solid cyan;
+}
+nav,
+section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.whiteLink { /* classes are called using . */
+    color: white;
+}
+
+.greyLink {
+    color: lightgrey;
+}
+
+a {
+    text-decoration: unset; /*underline is deco */
+    font-size: 0.8em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+main {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 0 14px;
+}
+
+.headerText { /* class takes PRIORITY over tag thus y we used headertext not h1*/
+    font-size: 4em;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+.searchBar {
+    display: flex;
+    width: 100%; /*100% of parent element - main (parent) */
+    max-width: 700px;
+    margin: 0 auto; /*0 is the vertical spacing, auto horizontal */
+    gap: 14px;
+    border: 1px solid grey;
+    padding: 14px;
+    border-radius: 24px;
+}
+
+.searchBar:hover {
+    border-color: transparent;
+    background: #334155;
+}
+
+.iconButtonContainer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.iconButton {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2e;
+    cursor: pointer;
+}
+
+input {
+    background: transparent;
+    outline: none;
+    border: unset;
+    color: white;
+    flex: 1;
+}
+
+.searchButtonsContainer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+}
+.searchButtonsContainer button {
+    padding: 10px 10px;
+    border-radius: 4%;
+    background: #334155;
+    border: unset;
+    color: white;
+    cursor: pointer;
+}
+
+.searchButtonsContainer button:hover {
+    border: 1px solid darkgray;
+}
+
+.languageSelection span {
+    color: cyan;
+
+}
+footer {
+    display: flex;
+    flex-direction: column;
+}
+footer > section {
+    padding: 14px;
+}
+
+footer > section:last-child { /* the > indicates direct descendants */
+    border-top: 1px solid darkgrey;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid darkgrey;
+}
+
+.footerLink {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footerLink a  {
+    cursor: pointer;
+}
+
+@media (min-width: 540px) {
+    footer > section:last-child {
+        flex-direction: row;
+    }
+}
